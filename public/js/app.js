@@ -38571,13 +38571,17 @@ var render = function() {
           _c("table", [
             _vm._m(0),
             _vm._v(" "),
-            _c("tbody", [
-              _c("tr", [
-                _c("td", [_vm._v(_vm._s("Fa"))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(_vm.board.cards.length))])
-              ])
-            ])
+            _c(
+              "tbody",
+              _vm._l(_vm.kanban.lists, function(board) {
+                return _c("tr", [
+                  _c("td", [_vm._v(_vm._s(board.title))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(board.cards.length))])
+                ])
+              }),
+              0
+            )
           ])
         ])
   ])
